@@ -65,7 +65,7 @@ Para encontrar un texto que Piero cita ("el que dice *De una foto…*"), buscalo
 | Precios, planes, piloto | `content/precios.json` |
 | Oferta o promo (activar, precio, fecha de fin, textos) | `content/oferta.json` — `active: true` la prende; se apaga sola después de `until` (AAAA-MM-DD). En los textos, `{price}`, `{regular}` y `{until}` se completan solos |
 | Cantidad de clientes y piezas, redes, WhatsApp, marcas | `content/numeros.json` |
-| Trabajos del carrusel | `content/trabajos.json` (`type`: video / casero / img; `brand`, `rubro`, `src`, `poster`, `secs`) + archivos en `public/trabajos/` |
+| Trabajos del carrusel | `content/trabajos.json` (`type`: video / casero / anuncio; `brand`, `rubro`, `src`, `poster`, `secs`) + archivos en `public/trabajos/` |
 | Guías gratis, skill IRIS, Mailchimp | `content/recursos.json` + portadas en `public/recursos/img/` |
 | Cualquier texto de la web | `content/textos/es.json`, `it.json`, `en.json` |
 
