@@ -17,7 +17,7 @@ Piero no es técnico. Vos no podés ver su pantalla ni entrar a su cuenta: él h
 
 Contale esto con tus palabras, corto:
 
-- **El código de tu web** vive en GitHub (`franaltt/piero-web`). Es como la carpeta original de la web.
+- **El código de tu web** vive en tu GitHub, en el repo `piero-web`. Es como la carpeta original de la web, y es tuya.
 - **El hosting** es la computadora que muestra tu web al mundo las 24 horas. Vamos a usar **Cloudflare Pages**: es gratis, rapidísimo, y cada vez que cambiamos algo en GitHub publica la web solo.
 - **El dominio** es la dirección: `pierodbenedetto.com`, por ejemplo. Se alquila por año. Lo compramos también en Cloudflare porque lo vende a precio de costo y se conecta solo.
 - Al final, para cambiar la web solo tenés que hablarme a mí: yo hago el cambio, te paso un link para que lo veas, y cuando me digas "publicalo" queda online.
@@ -37,11 +37,7 @@ Recomendale activar la verificación en dos pasos (en su perfil, *Authentication
 3. Elegí **GitHub** y autorizá con tu cuenta de GitHub (la misma con la que entrás a Claude Code).
 4. Elegí el repositorio **piero-web** → **Install & Authorize** → **Begin setup**.
 
-**Si `piero-web` no aparece en la lista:** el repo está en la cuenta de GitHub de Francesco, así que él tiene que habilitarlo una vez. Decile a Piero que le mande a Francesco este mensaje:
-
-> "Fran, para conectar la web a Cloudflare necesito que en tu GitHub instales la app *Cloudflare Workers and Pages* y le des acceso al repo piero-web (entrando a github.com/apps/cloudflare-workers-and-pages → Install → tu cuenta → Only select repositories → piero-web). Avisame cuando esté."
-
-Cuando Francesco avise, volvé a probar desde el paso 2 (si hace falta, en la lista de repos hay un enlace para actualizar o configurar la app de GitHub).
+**Si `piero-web` no aparece en la lista:** en la pantalla de GitHub que se abre al autorizar, tiene que elegir **Only select repositories** y marcar `piero-web` (o *All repositories*). Si ya autorizó antes sin marcarlo, abajo de la lista de repos hay un enlace para configurar la app de GitHub: ahí lo agrega. Si el repo no aparece en su GitHub, es que todavía no aceptó la transferencia que le mandó Francesco (le llega por mail).
 
 5. En **Set up builds and deployments** completá así (dictáselo campo por campo):
    - **Project name:** `piero-web` (de acá sale la dirección provisoria `piero-web.pages.dev`; si está tomado, `piero-dbenedetto` o similar)

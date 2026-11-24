@@ -3,8 +3,8 @@
 La web se edita hablándole a Claude. No hace falta tocar código.
 
 ## La primera vez
-1. Aceptá la invitación de GitHub al repo `piero-web` (te llega por mail).
-2. Entrá a **claude.ai/code** (o la app de Claude → Code), conectá tu GitHub y elegí el repo `franaltt/piero-web`.
+1. Aceptá la transferencia del repo `piero-web` que te manda Francesco (te llega por mail de GitHub). Después agregalo a él como colaborador: repo → Settings → Collaborators → Add people → `franaltt`.
+2. Entrá a **claude.ai/code** (o la app de Claude → Code), conectá tu GitHub y elegí tu repo `piero-web`.
 3. Escribile **hola** (o `/primeros-pasos`). Claude te va a guiar paso a paso para poner tu web online en Cloudflare con tu propio dominio. Son unos 20 minutos.
 
 ## Cada vez que quieras cambiar algo
