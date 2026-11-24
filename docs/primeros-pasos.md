@@ -39,7 +39,7 @@ Recomendale activar la verificación en dos pasos (en su perfil, *Authentication
 
 **Si `piero-web` no aparece en la lista:** el repo está en la cuenta de GitHub de Francesco, así que él tiene que habilitarlo una vez. Decile a Piero que le mande a Francesco este mensaje:
 
-> "Fran, para conectar la web a Cloudflare necesito que en tu GitHub instales la app *Cloudflare Workers and Pages* y le des acceso al repo piero-web (GitHub → Settings → Applications → Installed GitHub Apps, o instalándola desde el marketplace de GitHub). Avisame cuando esté."
+> "Fran, para conectar la web a Cloudflare necesito que en tu GitHub instales la app *Cloudflare Workers and Pages* y le des acceso al repo piero-web (entrando a github.com/apps/cloudflare-workers-and-pages → Install → tu cuenta → Only select repositories → piero-web). Avisame cuando esté."
 
 Cuando Francesco avise, volvé a probar desde el paso 2 (si hace falta, en la lista de repos hay un enlace para actualizar o configurar la app de GitHub).
 
