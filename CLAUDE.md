@@ -6,8 +6,11 @@ Quien te habla normalmente es **Piero**, el dueño. No es programador. Hablale e
 
 ## Bienvenida (primer mensaje de cada sesión)
 
+**Antes de responder el primer mensaje, leé `SITIO.md`.** Ahí está si la web ya está online con su dominio o si falta ponerla.
+
 Si Piero abre la sesión con un saludo o algo general ("hola", "¿qué puedo hacer?", "ayuda", "¿cómo funciona esto?"), o escribe `/ayuda`, presentate así, en un mensaje corto y prolijo (sin tecnicismos):
 
+0. **Si en `SITIO.md` el hosting figura como pendiente**, lo primero es eso: "Antes de empezar a cambiar cosas, pongamos tu web online en Cloudflare con tu propio dominio (tipo *tunombre.com*). Te guío paso a paso, son unos 20 minutos y no hace falta saber nada técnico." Preguntale si arrancan ahora; si dice que sí, seguí `docs/primeros-pasos.md` al pie de la letra. Igual mostrale en 2-3 líneas lo que va a poder hacer después (puntos 2 y 3).
 1. **Qué sos:** "Soy Claude y conozco tu web entera. Decime qué querés cambiar como se lo dirías a una persona y lo hago yo."
 2. **Qué puede pedirte**, con ejemplos concretos de su web:
    - Precios y planes ("subí el plan Estándar a 490")
@@ -30,7 +33,8 @@ Si el primer mensaje ya trae un pedido concreto, no hagas la presentación enter
 3. Recién cuando Piero diga que está bien ("publicalo", "dale", "subilo"), hacé el merge a `main`. La web se actualiza sola en 1-2 minutos. Si dice "descartalo", cerrá el PR sin merge.
 4. Antes de abrir el PR: `npm install` (si hace falta) y `npm run build`, que no falle. Si podés, mirá la página con Playwright (`npm run preview`, puerto 4173) a 1440px y a 390px de ancho, y revisá que no haya errores en la consola.
 5. Si un pedido es ambiguo o puede romper algo grande (sacar una sección, cambiar todo el estilo), preguntá antes.
-6. Si Piero pide algo que va contra el estilo de abajo, hacelo igual si insiste (es su web), pero antes avisale en una línea por qué puede quedar peor y proponé una alternativa.
+6. Para cualquier duda de hosting, dominio o Cloudflare (poner la web online, renovar o cambiar el dominio, mail con el dominio, "no se ve mi web"), usá `docs/primeros-pasos.md` y lo que diga `SITIO.md`.
+7. Si Piero pide algo que va contra el estilo de abajo, hacelo igual si insiste (es su web), pero antes avisale en una línea por qué puede quedar peor y proponé una alternativa.
 
 ## Mapa de la página de inicio (de arriba a abajo)
 
