@@ -1,6 +1,6 @@
 // Suscribe un mail a la lista de Mailchimp de Piero sin salir de la página.
 // actionUrl: la dirección del formulario de Mailchimp (la que termina en /subscribe/post?u=…&id=…),
-// se pega en el panel (/admin → Recursos → Mailchimp).
+// va en /content/recursos.json → mailchimp.url
 export function mailchimpSubscribe(actionUrl, fields) {
   return new Promise((resolve, reject) => {
     if (!actionUrl) { reject(Object.assign(new Error('Falta configurar Mailchimp'), { code: 'config' })); return; }

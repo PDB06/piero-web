@@ -1,5 +1,5 @@
 // Los textos de la web viven en /content/textos/<idioma>.json
-// y se editan desde el panel (/admin). Este archivo solo los junta.
+// (uno por idioma). Este archivo solo los junta.
 import es from '../../content/textos/es.json';
 import it from '../../content/textos/it.json';
 import en from '../../content/textos/en.json';

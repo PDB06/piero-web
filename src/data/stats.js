@@ -1,4 +1,4 @@
-// Números, redes, WhatsApp y marcas: se editan desde el panel (/admin → Números y contacto).
+// Números, redes, WhatsApp y marcas: viven en /content/numeros.json
 import n from '../../content/numeros.json';
 
 export const STATS = { clients: n.clients, pieces: n.pieces, years: n.years };

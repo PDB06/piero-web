@@ -1,4 +1,4 @@
-// Precios: se editan desde el panel (/admin → Precios). Viven en /content/precios.json
+// Precios: viven en /content/precios.json
 import precios from '../../content/precios.json';
 
 export const PILOT = precios.pilot;

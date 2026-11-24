@@ -1,4 +1,4 @@
-// Piezas del carrusel "El trabajo": se editan desde el panel (/admin → Trabajos).
+// Piezas del carrusel "El trabajo": viven en /content/trabajos.json
 // type: 'anuncio' (imagen) · 'video' · 'casero' (video casero con sonido)
 import data from '../../content/trabajos.json';
 

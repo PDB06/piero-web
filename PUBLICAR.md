@@ -1,30 +1,29 @@
-# Publicar en Netlify + panel para Piero
+# Publicar en Cloudflare + dominio propio
 
-Se hace una sola vez. Unos 10 minutos.
+Se hace una sola vez. Unos 15 minutos. Hosting gratis; el dominio se paga una vez por año.
 
-## 1. Repo en GitHub
-Ya está en `github.com/franaltt/piero-web`.
+## 1. Cuenta de Cloudflare
+Creá una cuenta en **dash.cloudflare.com** (gratis). Conviene que sea de Piero o una compartida, porque ahí va a estar su dominio.
 
-## 2. Conectar Netlify
-1. app.netlify.com → **Add new site → Import an existing project → GitHub** → elegí `piero-web`.
-2. Netlify lee `netlify.toml` solo (build `npm run build`, carpeta `dist`). **Deploy**.
-3. Opcional: Site configuration → Change site name (ej. `piero-dbenedetto`) o conectá un dominio propio.
+## 2. Conectar el repo
+1. En el panel de Cloudflare: **Workers & Pages → Create → Pages → Import an existing Git repository**.
+2. Conectá GitHub y elegí `franaltt/piero-web`.
+3. Configuración del build:
+   - Framework preset: **React (Vite)** (o ninguno)
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+4. **Save and Deploy**. En 1-2 minutos queda en `piero-web.pages.dev` (o el nombre que elijas).
 
-## 3. Login con GitHub para el panel
-1. GitHub → Settings → Developer settings → **OAuth Apps → New OAuth App**
-   - Application name: `Panel Piero`
-   - Homepage URL: la URL de Netlify del sitio
-   - Authorization callback URL: `https://api.netlify.com/auth/done`
-2. Copiá el **Client ID** y generá un **Client secret**.
-3. Netlify → tu sitio → **Site configuration → Access & security → OAuth → Install provider → GitHub** → pegá ID y secret.
+Desde ahí, cada cambio en `main` se publica solo, y cada Pull Request recibe un **link de vista previa** propio (Cloudflare lo comenta en el PR de GitHub).
+
+## 3. Comprar el dominio
+1. En Cloudflare: **Domain Registration → Register Domains**, buscá el nombre (ej. `pierodbenedetto.com`) y compralo. Cloudflare lo cobra a precio de costo, sin recargo.
+2. En el proyecto de Pages: **Custom domains → Set up a custom domain** → poné el dominio. Como el dominio ya está en Cloudflare, se configura solo (DNS y HTTPS incluidos).
+3. Sumá también `www.` y que redirija al dominio principal.
 
 ## 4. Darle acceso a Piero
-GitHub → repo `piero-web` → Settings → **Collaborators → Add people** → su usuario de GitHub (si no tiene, que se cree uno gratis). Acepta la invitación por mail y listo.
+1. GitHub → repo `piero-web` → **Settings → Collaborators → Add people** → el usuario de GitHub de Piero.
+2. Piero instala la app de Claude en GitHub para ese repo y abre Claude Code apuntando a `franaltt/piero-web`. Ver `COMO-EDITAR.md`.
 
-Piero entra a `https://<sitio>.netlify.app/admin`, toca **Iniciar sesión con GitHub**, y edita.
-
-## Qué puede cambiar Piero
-- **Precios y ofertas**: precio del piloto, los 3 planes, y la oferta (activar, precio, fecha de fin, texto). La oferta se apaga sola cuando pasa la fecha.
-- **Números, contacto y trabajos**: clientes, piezas, redes, WhatsApp, los trabajos del carrusel.
-- **Recursos gratis**: guías, la skill IRIS, URL de Mailchimp.
-- **Textos de la web**: todo, en español, italiano e inglés.
+## 5. Apagar Netlify
+Cuando el dominio ya funcione en Cloudflare, borrá el sitio en Netlify (o dejalo, no molesta).

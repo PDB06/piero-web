@@ -1,4 +1,4 @@
-// Oferta: se prende, se apaga y se edita desde el panel (/admin → Oferta).
+// Oferta: se prende, se apaga y se edita en /content/oferta.json (active, until, price y textos por idioma).
 // Vive en /content/oferta.json. Cuando pasa la fecha "until", se apaga sola.
 import o from '../../content/oferta.json';
 import { PILOT, PLANS } from './plans.js';
